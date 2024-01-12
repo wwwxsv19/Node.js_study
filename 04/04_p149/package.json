@@ -1,7 +1,0 @@
-{
-  "name": "script_test",
-  "version": "1.0.0",
-  "scripts": {
-    "hello": "echo 'hello Node.js'"
-  }
-}
