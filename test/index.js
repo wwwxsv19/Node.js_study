@@ -3,8 +3,8 @@ const fs = require("fs");
 const url = require("url");
 
 http.createServer((req, res) => {
-    const path = "";
-
+    let path = "";
+    
     if(req.url == '/'){
         path = 'index.html';
     } else if(req.url = '/hello'){
