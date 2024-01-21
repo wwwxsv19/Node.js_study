@@ -1,3 +1,5 @@
+// callback 이해하기 ( 회원가입 API )
+
 const DB = [];
 
 function register(user) {
