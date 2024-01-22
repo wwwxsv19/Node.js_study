@@ -1,4 +1,4 @@
-// p.174 코드를 promise 객체로 ㅂ구기
+// p.174 코드를 promise 객체로 바꾸기
 
 const DB = [];
 
@@ -37,5 +37,13 @@ function registerByPromise(user) {
 }
 
 const myUser = { email : "wwwxsv19@test.com", password : "1234", name : "wwwxsv19" };
+
+/*
 const result = registerByPromise(myUser);
 result.then(console.log);
+*/
+
+// 동시에 promise 객체를 호출해 결괏값 받기 : Promise.all([pm1], [pm2], ...  [pmn]);
+
+allResult = Promise.all([saveDB(myUser), sendEmail(myUser), getResult(myUser)]);
+allResult.then(console.log);
