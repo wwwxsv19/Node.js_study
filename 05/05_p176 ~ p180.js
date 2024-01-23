@@ -3,16 +3,16 @@
 const DB = [];
 
 function saveDB(user) {
-    const oldDBSize = DB.length;
+    const oldDBSize = DB.length + 1; // oldDBSize 의 크기를 변경하면
 
     DB.push(user);
     console.log(`save ${user.name} to DB`);
 
     return new Promise((resolve, reject) => { // callback 대신 promise
-        if(DB.length > oldDBSize) {
+        if(DB.length > oldDBSize) { // Promise 이행 조건에 맞지 않아 실행이 되지 않고
             resolve(user);
         } else {
-            reject(new error("Save DB Error!"));
+            reject(new Error("Save DB Error!")); // Save DB Error 가 발생!
         }
     });
 }
