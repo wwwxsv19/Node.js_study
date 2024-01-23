@@ -31,7 +31,7 @@ function getResult(user) {
 }
 
 function registerByPromise(user) {
-    const result = saveDB(user).then(sendEmail).then(getResult);
+    const result = saveDB(user).then(sendEmail).then(getResult).catch(error => new Error(error)).finally(() => console.log("완료!"));
     console.log(result);
     return result;
 }
