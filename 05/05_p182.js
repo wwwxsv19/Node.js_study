@@ -1,4 +1,4 @@
-// Promise 의 문제점 
+// Promise 의 문제점 1
 
 /*
 // 이상적인 Promise 코드 ~~
