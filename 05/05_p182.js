@@ -27,7 +27,7 @@ goodPromise("안녕하세요 ")
 */
 
 // 더 복잡한 Promise 코드!!
-
+// top 20 영화 순위 가져오기
 const axios = require("axios");
 const url = "https://raw.githubusercontent.com/wapj/jsbackend/main/movieinfo.json";
 
