@@ -3,7 +3,7 @@
 const { MongoClient, ServerApiVersion } = require('mongodb'); // 몽고DB 패키지 불러오기
 
 // 몽고DB 연결 정보
-const uri = "mongodb+srv://wwwxsv19:내 비밀번호 절대 지켱@cluster0.pkce9wh.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://wwwxsv19:wwwxsvkamja1119!!@cluster0.pkce9wh.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri, { // 몽고DB 클라이언트 객체 생성
     serverApi: {
