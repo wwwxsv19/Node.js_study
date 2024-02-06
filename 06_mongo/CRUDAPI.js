@@ -24,8 +24,8 @@ async function main() {
         const updatedDocuments = await collection.find({ name: "Andy" }).toArray();
         console.log("갱신된 문서 : ", updatedDocuments);
 
-        await collection.deleteOne({ name: "Andy" });
-        console.log("문서 삭제 완료");
+        // await collection.deleteOne({ name: "Andy" });
+        // console.log("문서 삭제 완료");
 
         await client.close();
     }  catch(err) {
