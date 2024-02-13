@@ -12,18 +12,22 @@ async function main() {
 
         const collection = client.db('test').collection('person');
 
+        // Create
         await collection.insertOne({name: "Andy", age: 30});
         console.log("문서 추가 완료");
 
+        // Read
         const documents = await collection.find({name: "Andy"}).toArray();
         console.log("찾은 문서 : ", documents);
 
+        // Update
         await collection.updateOne({ name: "Andy"}, { $set: { age: 31 } });
         console.log("문서 업데이트");
 
         const updatedDocuments = await collection.find({ name: "Andy" }).toArray();
         console.log("갱신된 문서 : ", updatedDocuments);
 
+        // Delete
         // await collection.deleteOne({ name: "Andy" });
         // console.log("문서 삭제 완료");
 
